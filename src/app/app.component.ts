@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
       <h1>
         Practical NGRX
       </h1>
+      <app-users-page></app-users-page>
     </div>
   `
 })
-export class AppComponent {}
+export class AppComponent {
+}

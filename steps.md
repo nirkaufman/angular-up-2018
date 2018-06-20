@@ -9,4 +9,4 @@
 `ng g feature user/User -m user/user.module.ts --group`
 
 ## Container
-`ng g container UsersPage --state reducers/index.ts --stateInterface State`
+`ng g container user/UsersPage --state reducers/user.reducer.ts --stateInterface State`
