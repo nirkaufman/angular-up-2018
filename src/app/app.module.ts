@@ -10,6 +10,7 @@ import {environment} from '../environments/environment';
 import {EffectsModule} from '@ngrx/effects';
 import {AppEffects} from './app.effects';
 import {UserModule} from './user/user.module';
+import {BooksModule} from './books/books.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {UserModule} from './user/user.module';
   imports: [
     BrowserModule,
     UserModule,
+    BooksModule,
     RouterModule.forRoot([]),
     StoreModule.forRoot(reducers, {metaReducers}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],

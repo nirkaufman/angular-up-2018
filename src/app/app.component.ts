@@ -8,6 +8,7 @@ import {Component} from '@angular/core';
         Practical NGRX
       </h1>
       <app-users-page></app-users-page>
+      <app-book-page></app-book-page>
     </div>
   `
 })
