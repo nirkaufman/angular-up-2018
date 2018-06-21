@@ -33,6 +33,5 @@ export class BookPageComponent implements OnInit {
 
   ngOnInit() {
     this.books = this.route.snapshot.data.books;
-    console.log(this.books);
   }
 }

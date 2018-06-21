@@ -7,8 +7,7 @@ import {AddBook} from './books/book/book.actions';
 
 @Injectable()
 export class BookResolver implements Resolve {
-  constructor(private store: Store) {
-  }
+  constructor(private store: Store) {}
 
   resolve(): Observable<any> {
     this.initBooks();
