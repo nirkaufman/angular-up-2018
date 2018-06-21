@@ -3,6 +3,7 @@ import { Update } from '@ngrx/entity';
 import { Book } from './book.model';
 
 export enum BookActionTypes {
+  FetchBooks = '[Book] Fetch Books',
   LoadBooks = '[Book] Load Books',
   AddBook = '[Book] Add Book',
   UpsertBook = '[Book] Upsert Book',
@@ -13,6 +14,10 @@ export enum BookActionTypes {
   DeleteBook = '[Book] Delete Book',
   DeleteBooks = '[Book] Delete Books',
   ClearBooks = '[Book] Clear Books'
+}
+
+export class FetchBooks implements Action {
+  readonly type = BookActionTypes.FetchBooks;
 }
 
 export class LoadBooks implements Action {

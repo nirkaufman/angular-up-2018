@@ -12,6 +12,8 @@ import {AppEffects} from './app.effects';
 import {UserModule} from './user/user.module';
 import {BooksModule} from './books/books.module';
 import {routes} from './app.routes';
+import {BookResolver} from './books.resolver.service';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import {routes} from './app.routes';
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot([AppEffects])
   ],
-  providers: [],
+  providers: [BookResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule {
