@@ -1,4 +1,8 @@
 import {Component} from '@angular/core';
+import {Store} from '@ngrx/store';
+import * as fromRoot from './reducers/index';
+import {Goto} from './navigation.actions';
+
 
 @Component({
   selector: 'app-root',
@@ -7,10 +11,17 @@ import {Component} from '@angular/core';
       <h1>
         Practical NGRX
       </h1>
-      <app-users-page></app-users-page>
-      <app-book-page></app-book-page>
+      <span (click)="go('user')">user</span>
+      <span (click)="go('books')">books</span>
+      <router-outlet></router-outlet>
     </div>
   `
 })
 export class AppComponent {
+
+  constructor(private store: Store<fromRoot.State>) {}
+
+  go(url) {
+    this.store.dispatch(new Goto(url));
+  }
 }

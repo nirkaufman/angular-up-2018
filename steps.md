@@ -16,3 +16,8 @@
 `ng g entity books/Book --flat false`
 `ng g container books/BookPage  --state book/book.reducer.ts --stateInterface State`
 
+## Routing Actions and reducer
+`ng g action Navigation`
+implement effects for routing
+
+

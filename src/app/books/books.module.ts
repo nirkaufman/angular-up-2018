@@ -5,8 +5,6 @@ import {reducer} from './book/book.reducer';
 import { BookPageComponent } from './book-page/book-page.component';
 import {FormsModule} from '@angular/forms';
 
-
-
 @NgModule({
   imports: [
     CommonModule,
@@ -17,3 +15,5 @@ import {FormsModule} from '@angular/forms';
   exports: [BookPageComponent]
 })
 export class BooksModule { }
+
+

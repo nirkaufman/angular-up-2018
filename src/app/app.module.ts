@@ -11,6 +11,7 @@ import {EffectsModule} from '@ngrx/effects';
 import {AppEffects} from './app.effects';
 import {UserModule} from './user/user.module';
 import {BooksModule} from './books/books.module';
+import {routes} from './app.routes';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import {BooksModule} from './books/books.module';
     BrowserModule,
     UserModule,
     BooksModule,
-    RouterModule.forRoot([]),
+    RouterModule.forRoot(routes),
     StoreModule.forRoot(reducers, {metaReducers}),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     EffectsModule.forRoot([AppEffects])
